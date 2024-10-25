@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="assets/loginPageLogo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study With Shubh! (SignIn)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <!-- Top Banner -->
+    <div id="topBanner" class="top-banner">
+        <p id="bannerText">Support StudyWithShubh:</p>
+        <a href="https://forms.gle/oD2mWuEK6Sw4sAJi7" class="banner-link" target="_blank">Support <i
+                class="fa-solid fa-circle-dollar-to-slot"></i></a>
+    </div>
+
+    <div class="main-content">
+        <div class="form-box">
+            <h1 class="form-heading">Login to Your Respective Course</h1>
+            <div class="container">
+                <input type="text" id="usernameInput" class="input-field" placeholder="Username">
+                <div class="login-section">
+                    <label for="password"></label>
+                    <div class="password-wrapper">
+                        <input type="password" id="passwordInput" class="password-input"
+                            placeholder="Enter your password">
+                        <button id="togglePassword" class="toggle-btn">Show</button>
+                    </div>
+                </div>
+
+                <button id="loginBtn" class="button">Login</button>
+                <button id="credBtn" class="button">Get Username & Password</button>
+                <img src="assets/signinPageImg.jpg" alt="Sign In Image">
+            </div>
+            <a style="text-decoration: none; color: #7289da; font-size: xx-large;" href="https://discord.gg/dX3dB2fQ"
+                target="_blank">
+                <i class="fa-brands fa-discord"></i>
+            </a>
+            <a style="text-decoration: none; color: violet; font-size: xx-large;"
+                href="https://www.instagram.com/___shubhashish___/" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a style="text-decoration: none; color: rgb(71, 104, 182); font-size: xx-large;"
+                href="https://www.linkedin.com/in/Shubhashish-Chakraborty/" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+        </div>
+
+        <div class="video-container">
+            <h1>Intro for Study With Shubh!</h1>
+            <h2>Get Every Information in this video!!!</h2>
+            <iframe src="https://drive.google.com/file/d/1-YeisyqbKPlmk6KL5jW5Gr_JjGUjs2K-/preview" frameborder="0"
+                allowfullscreen></iframe>
+        </div>
+
+        <div class="form-iframe-box">
+            <h1 class="form-heading">Fill the Form & SignUP to SWS</h1>
+            <div class="iframe-container">
+                <iframe
+                    src="https://docs.google.com/forms/d/e/1FAIpQLScklm4HwV0Kg7a0FU2u1BpPBkpgdzE5sAtwwnLesQrUME0XEg/viewform?embedded=true"
+                    width="640" height="1523" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            </div>
+        </div>
+
+        <div class="demo-lectures-container">
+            <div class="demo-heading-box">
+                <h1 class="demo-heading">Demo Lectures</h1>
+            </div>
+
+            <div class="demo-lectures">
+                <div class="video-div">
+                    <div class="video-content">
+                        <h2>Informatics Practices || Class-11th || Lecture-1: (1st September 2024)</h2>
+                        <iframe src="https://drive.google.com/file/d/1dTLRRLJu2QH_xy5XIWmg_iX_JZqkwbSn/preview"
+                            allow="autoplay"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="demo-lectures">
+                <div class="video-div">
+                    <div class="video-content">
+                        <h2>Informatics Practices || Class-11th || Lecture-2: (7th September 2024)</h2>
+                        <iframe src="https://drive.google.com/file/d/1vGHhAwnKZ60TOlDlq3NIiDIs9xsdKdgd/preview"
+                            allow="autoplay"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="demo-lectures">
+                <div class="video-div">
+                    <div class="video-content">
+                        <h2>Download & Install MySQL on Windows:</h2>
+                        <iframe src="https://drive.google.com/file/d/19Xh04gThc_ZEdKy_Up8SLc43QxOpxc7w/preview"
+                            allow="autoplay"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="demo-lectures">
+                <div class="video-div">
+                    <div class="video-content">
+                        <h2>Short Demo for Computer Science Students:</h2>
+                        <iframe src="https://drive.google.com/file/d/1KC0Mijq9LKxgsgXhnY7BXnLcwaVMb2Ko/preview"
+                            allow="autoplay"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sideBanner" class="side-banner">
+        <p id="bannerText">Scroll Down for SignUP & Demo Lectures & More!</p>
+        <button id="closeBanner" class="close-banner">×</button>
+    </div>
+
+    <script src="login.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const sideBanner = document.getElementById("sideBanner");
+            const closeBanner = document.getElementById("closeBanner");
+
+            setTimeout(() => {
+                sideBanner.classList.add("show");
+            }, 500);
+
+            closeBanner.addEventListener("click", function () {
+                sideBanner.style.display = 'none';
+            });
+        });
+
+        const togglePassword = document.getElementById('togglePassword');
+        const passwordInput = document.getElementById('passwordInput');
+
+        togglePassword.addEventListener('click', function () {
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+            this.textContent = type === 'password' ? 'Show' : 'Hide';
+        });
+    </script>
+</body>
+
+</html>
